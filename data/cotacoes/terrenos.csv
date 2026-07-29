@@ -1,4 +1,2 @@
 id_amostra,regiao_bairro,area_m2,preco_anunciado_rs,preco_m2_rs,fonte_anuncio,url_fonte,data_consulta,localidade,status_anuncio,grau_confiabilidade,observacoes_riscos
-AM-01,Zona Sul / Fazendinha,3200,480000.00,150.00,Portal Imobiliário Público,https://olx.com.br,2026-07-28,Macapá / AP,Ativo,Anúncio Comercial,Terreno plano em região residencial. Pendente de consulta de zoneamento e topografia.
-AM-02,Zona Norte / Curiaú,3500,420000.00,120.00,Portal Imobiliário Público,https://zapimoveis.com.br,2026-07-28,Macapá / AP,Ativo,Anúncio Comercial,Área ampla próxima à rodovia. Pendente de análise de drenagem e licenciamento ambiental.
-AM-03,Zona Oeste / Cabralzinho,3000,510000.00,170.00,Anúncio Público Local,https://chavesnamao.com.br,2026-07-28,Macapá / AP,Ativo,Anúncio Comercial,Região alta e consolidada. Necessidade de certidão de ônus e vistoria in loco.
+PROS-01,Macapa - regiao a definir,,,,Pesquisa imobiliaria pendente,,,Macapa / AP,Nao verificado,Sem evidencia anexada,Nao representa imovel identificado. Exigir URL especifica data captura matricula zoneamento drenagem acesso e vistoria.
