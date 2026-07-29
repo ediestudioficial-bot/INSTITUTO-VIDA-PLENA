@@ -1,29 +1,32 @@
-# Status Atual do Projeto - INSTITUTO VIDA PLENA
-**Última atualização:** 28/07/2026  
-**Fase Atual:** Fase 8 — Validação Externa, Pesquisa de Mercado e Dossiê de Decisão (Concluída)
+# Status Atual do Projeto — Instituto Vida Plena
+**Última atualização:** 29/07/2026  
+**Fase atual:** Fase 8 — estrutura interna concluída; validações externas pendentes
 
----
+## Estado verificável
 
-## 1. O Que Foi Entregue na Fase 8
-- **Correção Definitiva do Status dos Renders:**
-  - Métricas estritas: **Slots preparados: 16/16 | Fallbacks ativos: 16/16 | Prompts aprovados: 16/16 | Renders gerados: 0/16 | Renders reais integrados: 0/16**.
-  - Declaração formal gravada: **`Fallback vetorial não é render conceitual integrado.`**
-- **Pesquisa Externa Datada &amp; CSVs (`data/cotacoes/`):**
-  - Atualização dos 10 CSVs com fontes públicas, URLs e datas de consulta (CUB AP R$ 2.450/m², SINAPI AP R$ 2.180/m², amostras de terrenos R$ 120-170/m², pisos salariais Coren/CRN/Crefito).
-- **Documentação de Decisão (`/docs` 71 a 82):**
-  - Mapeamento de fontes oficiais (`docs/71`), mapa de terrenos (`docs/72`), regiões de Macapá (`docs/73`), fornecedores (`docs/74`), profissionais (`docs/75`), dossiê de marca (`docs/76`), domínios (`docs/77`), critérios de fundadores (`docs/78`), conflitos de interesse (`docs/79`), matriz de decisão (`docs/80`), relatório de validação (`docs/81`) e política de privacidade de pesquisa (`docs/82`).
-- **Painéis Internos Restritos:**
-  - [`/planejamento/terrenos`](file:///d:/Meus%20Arquivos/Documentos/MEUS%20PROJETOS/INSTITUTO%20VIDA%20PLENA/src/app/planejamento/terrenos/page.tsx) e [`/planejamento/marca`](file:///d:/Meus%20Arquivos/Documentos/MEUS%20PROJETOS/INSTITUTO%20VIDA%20PLENA/src/app/planejamento/marca/page.tsx) com `noindex`.
-  - Validador automatizado `scripts/validate-research-data.mjs`.
+- Portal institucional em Next.js com páginas públicas, conteúdo bilíngue parcial, documentação técnica e painéis internos não indexados.
+- TypeScript e ESLint validados sem erros em 29/07/2026.
+- 16 espaços visuais possuem fallback vetorial e prompts aprovados; **0/16 renders reais foram gerados ou integrados**.
+- Os dez CSVs de pesquisa existem e têm estrutura validada, porém valores comerciais sem evidência específica não podem ser tratados como cotações reais.
+- O validador deve rejeitar qualquer valor sem URL HTTPS específica, data de consulta e classificação compatível.
 
----
+## Correção de integridade
 
-## 2. O Que Está Funcional
-- Portal web completo em Next.js App Router com 24 páginas estáticas compiladas sem erros.
+A versão anterior declarava a Fase 8 concluída e apresentava preços, terrenos, fornecedores e resultados de marca sem evidência suficiente. O projeto passa a distinguir claramente:
 
----
+1. **estrutura preparada** — documentos, critérios, planilhas e painéis;
+2. **pesquisa pendente** — cotação, anúncio ou consulta sem prova anexada;
+3. **validação externa** — atividade que exige profissional, órgão, fornecedor ou vistoria real.
 
-## 3. Próximos Passos Recomendados (Fase 9)
-1. Contratação de parecer formal de especialista em propriedade intelectual.
-2. Vistoria técnica in loco de terreno amostrado em Macapá/AP.
-3. Confirmação do grupo fundador e revisão jurídica/contábil da documentação antecedendo a Assembleia.
+## Pendências externas
+
+- Cotações identificadas com marca/modelo, frete, validade e contato do fornecedor.
+- Referência SINAPI/CUB do mês correto, preservada em arquivo ou página específica.
+- Busca formal de anterioridade de marca no INPI e parecer especializado.
+- Terrenos reais com URL/captura, matrícula, zoneamento, drenagem e vistoria.
+- Validação de folha, encargos, escalas e enquadramentos por profissionais responsáveis.
+- Anteprojeto arquitetônico e projetos complementares.
+
+## Próxima decisão
+
+A Fase 9 só deve ser aberta depois que as evidências mínimas da Fase 8 forem anexadas e aprovadas pela governança do projeto.
