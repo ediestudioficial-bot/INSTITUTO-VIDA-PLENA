@@ -1,379 +1,55 @@
-import React from "react";
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import {
-  Heart,
-  Home as HomeIcon,
-  Sun,
-  ShieldCheck,
-  Users,
-  TreePine,
-  Coffee,
-  Palette,
-  Mic,
-  BookOpen,
-  Flower2,
-  ArrowRight,
-  CheckCircle2,
-  Building2,
-  Stethoscope,
-  Church,
-  Quote,
-} from "lucide-react";
-import { SectionHeading } from "@/components/SectionHeading";
-import { StatusTag } from "@/components/StatusTag";
-import { MasterplanDiagram } from "@/components/MasterplanDiagram";
+import { ArrowRight, Building2, FileText, Handshake, HeartHandshake, Landmark, ShieldCheck } from "lucide-react";
+
+const hero = "https://lh3.googleusercontent.com/aida/AP1WRLvG7IxyU0YTJ4OT7E5M1gQU0YidAzL2-fRXf0tzZj5kNA941d1lNwPX7WqicGd7rDP0tsgfNc_K2mMLIGk0Yx54wMAn-cpVhZ4oG2i2wcSEAAv233GCZHwN1epTbZIOAnG-_m-dwN26kJEpUNNgKj_CK6sGbKIhIYHo50vEXSYwe5xrCI-VonxmMA7FmyYHav-u8s1Zpv7Sk7mBWwu6aQb56oaOF4vWZyZgoh1wNGlSNxb8eOyR_K7R3u4";
+const mission = "https://lh3.googleusercontent.com/aida/AP1WRLsJZB0evwHapUcpNeroMAVj9xnzLxFHAN_TicWVO92Jeduziwgzuz-lS0W_-TLL9-ZgGnpBwj5AtTVQz5GVZsJW6feF-Uymvrf8Qyk4bzX--kqNE4Z0nChQL8snQBicjXwCdGPvwYBuIjDXTDaTQTRKhNuh0dAhG8oet710BheaO-aEec3DBrY0thwyzwIyADmcjnn2K79FwVwTx5c_cuoTV1_O4tDeMx--Ia1KHF2fQlLnXOwH9TnABq4m";
+const building = "https://lh3.googleusercontent.com/aida/AP1WRLvT0VZZzf1TZtKKX8yP-tqQPRYxr60bQB8HQmKEG7cWSDiHp-D5KCLddgREgoxS-T8wLDaDFwStZyh68zTO51caYQ834h_IWPBb5O9bkkn4tGnFytPyCHBAey5shLYEE9rv_1c0vV1aZT_o7Q2I73yvidfGnzPNW58CW5Y3rlkdSRpDQm5pfC7FlHiJ8sma2q3abAKYL1VEB5Ma2SfEeK_XJw2yfW0I873dOER0W3_EFJnC985WT43vKUyg";
+const community = "https://lh3.googleusercontent.com/aida/AP1WRLugMgyZNGSfNH8F-Cf12FojjXBa2M6cK0gvQ5U1UleO-juawkUmTTyPJr2l6VNVpq9MUzCrMi3NlRj_ZgSHdwYevbXrzAWE1FU_335F0g0UuzhB8Z0SAm3KlklY2UdD3q_NLPsOiNiwRs0ZtJ2rxZ0xY462rlTKXLTfmbE239gxRaIWFFjIB4KFvjeM8mOlbYxc5IWLaCqhyAVDldwCohEt20jj6sCghrNUwW_7fHaAjT_KHZHaB1rYIJJl";
+
+const timeline = [
+  ["FASE 01 — CONCEPÇÃO", "Idealização do Projeto Vida Plena", "Definição da visão, dos valores e do modelo institucional."],
+  ["FASE 02", "Constituição e governança", "Estruturação jurídica, administrativa e ética."],
+  ["FASE 03", "Pesquisa e viabilidade", "Validações técnicas, territoriais e financeiras."],
+  ["FASE 04", "Projeto arquitetônico", "Desenvolvimento do anteprojeto e projetos complementares."],
+  ["FASES 05–13", "Licenças, mobilização, construção e equipagem", "Execução condicionada às aprovações e aos recursos necessários."],
+  ["FASE 14", "Acolhimento dos primeiros moradores", "Início das atividades após todas as autorizações aplicáveis."],
+];
 
 export default function HomePage() {
-  return (
-    <div className="space-y-24 pb-20">
-      {/* 1. HERO CINEMATOGRÁFICO */}
-      <section className="relative bg-gradient-to-b from-brand-deep via-brand-deep to-brand-deepDark text-brand-cream py-20 lg:py-28 overflow-hidden rounded-b-[40px]">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-sage/10 blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-brand-gold/10 blur-3xl pointer-events-none"></div>
+  return <>
+    <section id="inicio" className="relative flex min-h-[760px] items-end overflow-hidden pt-20 text-white md:min-h-screen md:items-center">
+      <img src={hero} alt="Pessoa idosa acolhida com afeto" className="absolute inset-0 h-full w-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-deepDark/85 via-brand-deepDark/45 to-transparent" />
+      <div className="editorial-shell relative z-10 w-full pb-20 pt-36 md:pb-0"><div className="max-w-3xl">
+        <span className="editorial-label mb-5 block !text-white/75">Projeto social de inspiração cristã</span>
+        <h1 className="font-serif text-[clamp(3rem,7vw,5.5rem)] font-semibold leading-[1.02] tracking-[-.035em] text-white">Envelhecer com dignidade também é um ato de amor.</h1>
+        <p className="mt-8 max-w-2xl text-lg leading-8 text-white/90">O Instituto Vida Plena nasceu de uma convicção cristã de que as pessoas idosas merecem envelhecer com dignidade, amparo e amor em ação.</p>
+        <div className="mt-10 flex flex-col gap-3 sm:flex-row"><Link href="/o-projeto" className="bg-brand-deep px-8 py-4 text-center text-xs font-semibold uppercase tracking-[.12em] text-white">Conheça o projeto</Link><Link href="/participe" className="border border-white px-8 py-4 text-center text-xs font-semibold uppercase tracking-[.12em] text-white hover:bg-white hover:text-brand-deep">Como participar</Link></div>
+      </div></div>
+    </section>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Texto Hero */}
-            <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-cream/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold backdrop-blur-sm">
-                <Sun className="w-4 h-4 text-brand-gold" />
-                <span>Projeto Social Cristão de Longa Permanência</span>
-              </div>
+    <section className="editorial-section bg-brand-cream" id="missao"><div className="editorial-shell grid items-center gap-16 md:grid-cols-12">
+      <div className="md:col-span-5"><span className="editorial-label mb-5 block">Valores & essência</span><h2 className="editorial-title mb-8">Nossa missão é restaurar a esperança.</h2><div className="space-y-6 editorial-copy"><p>A velhice não deve ser um período de solidão ou invisibilidade, mas um capítulo de plenitude, pertencimento e respeito.</p><p>O projeto propõe um ambiente em que o cuidado físico se una ao amparo espiritual e emocional, honrando a história e a individualidade de cada pessoa.</p></div><div className="mt-10 grid grid-cols-2 border-t editorial-rule pt-8"><div><strong className="block font-serif text-3xl font-medium text-brand-deep">Integral</strong><span className="editorial-label mt-2 block">Cuidado</span></div><div><strong className="block font-serif text-3xl font-medium text-brand-deep">Solidário</strong><span className="editorial-label mt-2 block">Propósito</span></div></div></div>
+      <div className="relative md:col-start-7 md:col-span-6"><img src={mission} alt="Gesto de cuidado entre duas pessoas" className="aspect-[4/5] w-full object-cover" /><blockquote className="bg-brand-cream p-7 font-serif text-xl italic text-brand-deep lg:absolute lg:-bottom-8 lg:-left-8 lg:max-w-xs">“O cuidado é a linguagem mais profunda do amor.”</blockquote></div>
+    </div></section>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-warmWhite leading-[1.15]">
-                Um lugar para <br />
-                <span className="text-brand-gold italic">continuar vivendo.</span>
-              </h1>
+    <section className="editorial-section bg-brand-sageLight" id="como-sera"><div className="editorial-shell"><div className="mx-auto mb-16 max-w-3xl text-center"><span className="editorial-label mb-5 block">Infraestrutura de excelência</span><h2 className="editorial-title">Um refúgio de paz projetado para o bem-estar.</h2></div><div className="relative min-h-[600px] overflow-hidden"><img src={building} alt="Referência conceitual de arquitetura integrada à natureza" className="absolute inset-0 h-full w-full object-cover" /><div className="relative ml-auto mt-72 max-w-lg border-l-4 border-brand-wood bg-white p-10 md:mr-12"><h3 className="mb-5 font-serif text-3xl font-medium text-brand-deep">Conforto e dignidade</h3><p className="editorial-copy">A proposta arquitetônica prioriza acessibilidade, iluminação natural, áreas verdes e espaços de convivência sem aparência hospitalar.</p><div className="mt-7 space-y-3 text-sm text-brand-charcoal"><p>— Suítes adaptadas</p><p>— Ambientes de saúde e reabilitação</p><p>— Espaços de espiritualidade e convivência</p></div><Link href="/como-sera" className="mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[.12em] text-brand-deep">Conheça a proposta <ArrowRight className="h-4 w-4" /></Link></div></div></div></section>
 
-              <p className="text-lg md:text-xl text-brand-cream/90 font-sans leading-relaxed max-w-2xl font-light">
-                O Instituto Vida Plena nasce do sonho de construir um lar onde pessoas idosas possam viver com dignidade, segurança, cuidado, fé, vínculos e propósito.
-              </p>
+    <section className="editorial-section bg-brand-cream" id="transparencia"><div className="editorial-shell grid gap-12 border-y editorial-rule py-14 md:grid-cols-3">
+      <div><Landmark className="mb-6 h-8 w-8 stroke-1 text-brand-wood"/><h3 className="mb-4 font-serif text-2xl font-medium">Governança ética</h3><p className="text-sm leading-7 text-brand-charcoal/75">Estrutura profissional, responsabilidades definidas e controle institucional.</p></div>
+      <div><FileText className="mb-6 h-8 w-8 stroke-1 text-brand-wood"/><h3 className="mb-4 font-serif text-2xl font-medium">Informações abertas</h3><p className="text-sm leading-7 text-brand-charcoal/75">Documentos, avanços, limitações e decisões apresentados com clareza.</p></div>
+      <div><ShieldCheck className="mb-6 h-8 w-8 stroke-1 text-brand-wood"/><h3 className="mb-4 font-serif text-2xl font-medium">Compromisso social</h3><p className="text-sm leading-7 text-brand-charcoal/75">Nenhuma promessa de operação, parceria ou captação antes da regularização necessária.</p></div>
+    </div></section>
 
-              <div className="p-4 rounded-xl bg-brand-deepDark/80 border-l-4 border-brand-gold text-brand-cream/95 text-base italic font-serif shadow-inner max-w-xl">
-                &quot;Não queremos construir apenas uma casa de repouso. Queremos construir um verdadeiro lar.&quot;
-              </div>
+    <section className="editorial-section bg-brand-creamDark/70"><div className="editorial-shell"><h2 className="mb-16 text-center font-serif text-4xl font-medium">Jornada de implementação</h2><div className="relative mx-auto max-w-4xl border-l border-brand-deep/20 pl-10"><div className="space-y-12">{timeline.map(([phase,title,text]) => <div key={phase} className="timeline-node relative"><span className="editorial-label mb-2 block">{phase}</span><h3 className="font-serif text-2xl font-medium">{title}</h3><p className="mt-2 text-sm text-brand-charcoal/65">{text}</p></div>)}</div><Link href="/etapas" className="mt-12 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[.12em] text-brand-deep">Ver todas as etapas <ArrowRight className="h-4 w-4" /></Link></div></div></section>
 
-              <div className="pt-4 flex flex-wrap gap-4 items-center">
-                <Link
-                  href="#o-sonho"
-                  className="px-7 py-3.5 bg-brand-gold hover:bg-amber-400 text-brand-deepDark font-serif font-bold text-base rounded-xl transition-all shadow-gold hover:scale-105 flex items-center gap-2"
-                >
-                  Conheça este sonho
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/masterplan"
-                  className="px-6 py-3.5 bg-brand-cream/10 hover:bg-brand-cream/20 text-brand-cream font-medium text-base rounded-xl border border-brand-cream/20 transition-all flex items-center gap-2"
-                >
-                  Explore o Masterplan
-                </Link>
-              </div>
+    <section className="editorial-section bg-brand-cream" id="participar"><div className="editorial-shell grid items-center gap-20 lg:grid-cols-2"><div className="relative"><img src={community} alt="Comunidade reunida em ambiente acolhedor" className="aspect-square w-full object-cover"/><span className="absolute -right-10 -top-10 hidden h-40 w-40 border border-brand-wood/30 lg:block"/></div><div><span className="editorial-label mb-5 block">Seja um parceiro</span><h2 className="editorial-title mb-10">Sua participação ajuda a construir um legado de amor.</h2>
+      <Link href="/participe" className="group block border-b editorial-rule py-6"><div className="flex items-center justify-between"><span className="flex items-center gap-4"><HeartHandshake className="h-5 w-5 text-brand-wood"/><strong className="font-serif text-2xl font-medium text-brand-deep">Manifestação de interesse</strong></span><ArrowRight className="h-5 w-5 text-brand-wood"/></div><p className="mt-3 text-sm text-brand-charcoal/65">Pessoas que desejam acompanhar, apoiar ou colaborar com o projeto.</p></Link>
+      <Link href="/participe" className="group block border-b editorial-rule py-6"><div className="flex items-center justify-between"><span className="flex items-center gap-4"><Building2 className="h-5 w-5 text-brand-wood"/><strong className="font-serif text-2xl font-medium text-brand-deep">Conhecimento especializado</strong></span><ArrowRight className="h-5 w-5 text-brand-wood"/></div><p className="mt-3 text-sm text-brand-charcoal/65">Profissionais das áreas jurídica, contábil, assistencial, arquitetônica e social.</p></Link>
+      <Link href="/participe" className="group block border-b editorial-rule py-6"><div className="flex items-center justify-between"><span className="flex items-center gap-4"><Handshake className="h-5 w-5 text-brand-wood"/><strong className="font-serif text-2xl font-medium text-brand-deep">Parcerias institucionais</strong></span><ArrowRight className="h-5 w-5 text-brand-wood"/></div><p className="mt-3 text-sm text-brand-charcoal/65">Organizações alinhadas à missão e aos princípios de transparência.</p></Link>
+    </div></div></section>
 
-              <div className="pt-2 flex items-center gap-3 text-xs text-brand-cream/70">
-                <StatusTag status="estudo" label="Unidade Inicial Proposta: 24 Moradores" />
-                <span>|</span>
-                <StatusTag status="conceito" label="Arquitetura Térrea Acessível" />
-              </div>
-            </div>
-
-            {/* Cartão de Destaque da Pousada */}
-            <div className="lg:col-span-5">
-              <div className="relative bg-brand-deepDark border border-brand-gold/30 rounded-3xl p-8 shadow-2xl space-y-6 text-brand-cream">
-                <div className="flex items-center justify-between border-b border-brand-cream/10 pb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-brand-gold/20 text-brand-gold">
-                      <HomeIcon className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-serif font-bold text-lg text-brand-warmWhite">
-                        Conceito de Pousada
-                      </h3>
-                      <p className="text-xs text-brand-gold font-serif">Ambiente Familiar e Térreo</p>
-                    </div>
-                  </div>
-                  <StatusTag status="conceito" />
-                </div>
-
-                <ul className="space-y-3 text-sm text-brand-cream/80">
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-1" />
-                    <span>Jardim Central com circulação 100% acessível (NBR 9050).</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-1" />
-                    <span>Ausência de aparência fria ou hospitalar.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-1" />
-                    <span>Suítes adaptadas com iluminação natural e vista para a natureza.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-1" />
-                    <span>Atendimento em saúde multidisciplinar 24h.</span>
-                  </li>
-                </ul>
-
-                <div className="pt-2">
-                  <Link
-                    href="/como-sera"
-                    className="w-full block text-center py-2.5 rounded-lg bg-brand-cream/10 hover:bg-brand-cream/20 text-brand-cream text-xs font-semibold transition-colors border border-brand-cream/15"
-                  >
-                    Veja Como Será o Lar ➔
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. O SONHO & POR QUE ESTE PROJETO PRECISA EXISTIR */}
-      <section id="o-sonho" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6 space-y-6">
-            <SectionHeading
-              badge="Nossa Origem & Propósito"
-              title="O Sonho do Instituto Vida Plena"
-              description="Acreditamos que a velhice é uma estação abençoada da vida, repleta de sabedoria, memórias e dignidade."
-            />
-
-            <p className="text-brand-charcoal text-base leading-relaxed">
-              Em um mundo onde idosos muitas vezes enfrentam a solidão, o isolamento social e a perda de autonomia, o Instituto Vida Plena surge para erguer uma comunidade onde cada pessoa continue a viver com alegria, conforto físico e amparo espiritual.
-            </p>
-
-            <div className="grid grid-cols-2 gap-4 pt-2">
-              <div className="p-4 rounded-xl bg-brand-warmWhite border border-brand-wood/15 shadow-sm">
-                <Heart className="w-6 h-6 text-brand-wood mb-2" />
-                <h4 className="font-serif font-bold text-brand-deep text-base">Amor Cristão</h4>
-                <p className="text-xs text-brand-charcoal/70 mt-1">Cuidado manifestado em ações concretas de compaixão.</p>
-              </div>
-              <div className="p-4 rounded-xl bg-brand-warmWhite border border-brand-wood/15 shadow-sm">
-                <ShieldCheck className="w-6 h-6 text-brand-wood mb-2" />
-                <h4 className="font-serif font-bold text-brand-deep text-base">Respeito à História</h4>
-                <p className="text-xs text-brand-charcoal/70 mt-1">Preservação da biografia e identidade de cada idoso.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:col-span-6">
-            <div className="bg-brand-sageLight/60 p-8 rounded-3xl border border-brand-sage/20 space-y-6">
-              <h3 className="font-serif text-2xl font-bold text-brand-deep">
-                Por Que Este Projeto Precisa Existir
-              </h3>
-
-              <div className="space-y-4">
-                <div className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-brand-deep text-brand-gold flex items-center justify-center shrink-0 font-bold text-sm">
-                    1
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-brand-deep text-base">Combate à Solidão</h4>
-                    <p className="text-sm text-brand-charcoal/80">Proporcionar um ambiente de convivência onde os idosos se sintam escutados e pertencentes.</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-brand-deep text-brand-gold flex items-center justify-center shrink-0 font-bold text-sm">
-                    2
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-brand-deep text-base">Segurança em Saúde</h4>
-                    <p className="text-sm text-brand-charcoal/80">Acompanhamento contínuo por médicos, enfermeiros, fisioterapeutas e nutricionistas.</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-brand-deep text-brand-gold flex items-center justify-center shrink-0 font-bold text-sm">
-                    3
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-brand-deep text-base">Fortalecimento Familiar</h4>
-                    <p className="text-sm text-brand-charcoal/80">Espaços amplos criados para reuniões frequentes entre idosos, seus filhos e netos.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. UM LAR, NÃO UMA INSTITUIÇÃO FRIA (JARDIM CENTRAL) */}
-      <section className="bg-brand-warmWhite py-20 border-y border-brand-wood/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <SectionHeading
-            badge="Arquitetura Humana & Biofílica"
-            title="Um lar residencial, não uma instituição fria"
-            description="Projetado em torno de um Jardim Central com luz natural, passarerias cobertas, varandas acolhedoras e total acessibilidade."
-            centered
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-wood/15 hover:shadow-card transition-all space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-brand-deep text-brand-gold flex items-center justify-center">
-                <TreePine className="w-6 h-6" />
-              </div>
-              <h3 className="font-serif font-bold text-xl text-brand-deep">Jardim Central</h3>
-              <p className="text-sm text-brand-charcoal/80 leading-relaxed">
-                O coração verde do Instituto. Espaço seguro para caminhar, banho de sol e encontros sob árvores sombreadas.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-wood/15 hover:shadow-card transition-all space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-brand-deep text-brand-gold flex items-center justify-center">
-                <Building2 className="w-6 h-6" />
-              </div>
-              <h3 className="font-serif font-bold text-xl text-brand-deep">Arquitetura Térrea</h3>
-              <p className="text-sm text-brand-charcoal/80 leading-relaxed">
-                Construção 100% térrea que elimina escadas e degraus, com rampas suaves e barras duplas de apoio integradas.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-wood/15 hover:shadow-card transition-all space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-brand-deep text-brand-gold flex items-center justify-center">
-                <Stethoscope className="w-6 h-6" />
-              </div>
-              <h3 className="font-serif font-bold text-xl text-brand-deep">Saúde Sem Caráter Hospitalar</h3>
-              <p className="text-sm text-brand-charcoal/80 leading-relaxed">
-                Posto de enfermagem e consultórios dispostos de forma discreta para preservar o clima aconchegante de residência.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. MASTERPLAN INTERATIVO DA LANDING PAGE */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <SectionHeading
-          badge="Zoneamento Espacial"
-          title="Como o sonho poderá ganhar forma"
-          description="Explore o diagrama conceitual das 8 Zonas Funcionais organizadas ao redor do Jardim Central."
-        />
-
-        <MasterplanDiagram />
-      </section>
-
-      {/* 5. UMA VIDA INTEIRA IMPORTA */}
-      <section className="bg-brand-sageLight/50 py-16 border-y border-brand-sage/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <SectionHeading
-            badge="Preservação de Biografias"
-            title="Uma vida inteira importa"
-            description="Cada morador trará uma história rica em memórias, lições e conquistas. Nossos espaços foram desenhados para cuidar do presente sem apagar o passado."
-            centered
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-2xl bg-brand-warmWhite border border-brand-wood/15 space-y-2">
-              <Mic className="w-8 h-8 text-brand-deep mb-1" />
-              <h3 className="font-serif font-bold text-lg text-brand-deep">Estúdio de Memórias</h3>
-              <p className="text-xs text-brand-charcoal/80">Espaço acústico para gravação de depoimentos biográficos em áudio e vídeo.</p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-brand-warmWhite border border-brand-wood/15 space-y-2">
-              <Palette className="w-8 h-8 text-brand-deep mb-1" />
-              <h3 className="font-serif font-bold text-lg text-brand-deep">Oficina das Memórias</h3>
-              <p className="text-xs text-brand-charcoal/80">Ateliê para pintura, trabalhos manuais e costura terapêutica.</p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-brand-warmWhite border border-brand-wood/15 space-y-2">
-              <Flower2 className="w-8 h-8 text-brand-deep mb-1" />
-              <h3 className="font-serif font-bold text-lg text-brand-deep">Jardim das Memórias</h3>
-              <p className="text-xs text-brand-charcoal/80">Área verde com árvores comemorativas plantadas em homenagem a histórias de vida.</p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-brand-warmWhite border border-brand-wood/15 space-y-2">
-              <BookOpen className="w-8 h-8 text-brand-deep mb-1" />
-              <h3 className="font-serif font-bold text-lg text-brand-deep">Biblioteca Viva</h3>
-              <p className="text-xs text-brand-charcoal/80">Canto de leitura para compartilhamento de livros e rodas de histórias.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. NÃO SERÁ UM LUGAR ISOLADO DA VIDA */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <SectionHeading
-          badge="Integração Comunitária"
-          title="Não será um lugar isolado da vida"
-          description="O Instituto promoverá a convivência constante com familiares, igrejas, voluntários e crianças."
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-6 rounded-2xl bg-brand-warmWhite border border-brand-wood/15 space-y-3">
-            <Users className="w-8 h-8 text-brand-deep" />
-            <h3 className="font-serif font-bold text-xl text-brand-deep">Praça da Família</h3>
-            <p className="text-sm text-brand-charcoal/80">
-              Área sob pergolados criada para recepção de netos, filhos e visitas com conforto e alegria.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-brand-warmWhite border border-brand-wood/15 space-y-3">
-            <Church className="w-8 h-8 text-brand-deep" />
-            <h3 className="font-serif font-bold text-xl text-brand-deep">Igrejas Parceiras</h3>
-            <p className="text-sm text-brand-charcoal/80">
-              Apoio espiritual e visitas devocionais organizadas sob protocolos de respeito e acolhimento.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-brand-warmWhite border border-brand-wood/15 space-y-3">
-            <Coffee className="w-8 h-8 text-brand-deep" />
-            <h3 className="font-serif font-bold text-xl text-brand-deep">Café Vida Plena</h3>
-            <p className="text-sm text-brand-charcoal/80">
-              Canto especial de convivência para encontros informais e cafés da tarde com a comunidade.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. MENSAGEM DE QUEM SONHOU ESTE PROJETO (CARTA DO IDEALIZADOR) */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-brand-deep text-brand-cream p-8 md:p-12 rounded-3xl space-y-6 shadow-xl relative overflow-hidden">
-          <Quote className="w-16 h-16 text-brand-gold/20 absolute -top-4 -right-4" />
-          <span className="text-xs font-bold text-brand-gold uppercase tracking-wider bg-brand-cream/10 px-3 py-1 rounded-full">
-            Carta do Conselho Idealizador
-          </span>
-          <h3 className="font-serif font-bold text-3xl text-brand-warmWhite">
-            Uma mensagem de quem sonhou este projeto
-          </h3>
-          <p className="text-brand-cream/90 font-light text-base leading-relaxed italic">
-            &quot;O Instituto Vida Plena não nasceu de um plano comercial, mas da convicção cristã de que as pessoas idosas merecem envelhecer com dignidade, amparo e amor em ação.&quot;
-          </p>
-          <div className="pt-2">
-            <Link
-              href="/parceiros"
-              className="inline-flex items-center gap-2 text-brand-gold hover:underline font-semibold text-sm"
-            >
-              Conheça a Rede de Parceiros e Colaboradores ➔
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. CONVITE FINAL E NAVEGAÇÃO */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <div className="bg-brand-sageLight/60 border border-brand-sage/20 p-8 md:p-12 rounded-3xl space-y-4">
-          <h3 className="text-3xl font-serif font-bold text-brand-deep">
-            Acompanhe a Evolução do Projeto
-          </h3>
-          <p className="text-sm text-brand-charcoal/80 max-w-xl mx-auto">
-            Veja as etapas cumpridas e os próximos passos do planejamento institucional.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <Link
-              href="/etapas"
-              className="px-6 py-3.5 bg-brand-deep text-brand-cream font-bold text-sm rounded-xl hover:bg-brand-deepDark transition-colors"
-            >
-              Ver Linha do Tempo em 14 Etapas
-            </Link>
-            <Link
-              href="/transparencia"
-              className="px-6 py-3.5 bg-brand-warmWhite text-brand-deep border border-brand-wood/20 font-bold text-sm rounded-xl hover:bg-brand-cream transition-colors"
-            >
-              Painel de Governança &amp; Transparência
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+    <section className="editorial-section bg-brand-sageLight"><div className="editorial-shell max-w-3xl"><h2 className="mb-12 text-center font-serif text-4xl font-medium">Perguntas frequentes</h2>{[["O Instituto já está funcionando?","Ainda não. O Instituto Vida Plena está em fase de planejamento, pesquisa e estruturação."],["Existe alguma captação financeira ativa?","Não. Qualquer futura mobilização financeira dependerá da constituição jurídica, de conta institucional e dos controles de governança."],["O atendimento será restrito a uma denominação religiosa?","Não. A inspiração é cristã, mas o acolhimento previsto respeita a dignidade e a liberdade de cada pessoa."]].map(([q,a]) => <details key={q} className="group border-b editorial-rule py-5"><summary className="cursor-pointer list-none font-serif text-xl text-brand-deep">{q}<span className="float-right text-brand-wood">+</span></summary><p className="mt-4 pr-8 text-sm leading-7 text-brand-charcoal/70">{a}</p></details>)}<div className="mt-10 text-center"><Link href="/perguntas-frequentes" className="text-xs font-semibold uppercase tracking-[.12em] text-brand-deep">Ver todas as perguntas</Link></div></div></section>
+  </>;
 }
