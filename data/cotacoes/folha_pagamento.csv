@@ -1,0 +1,7 @@
+cargo,categoria_profissional,cargahoraria_semanal,piso_remuneracao_base_rs,encargos_provisoes_rs,custo_total_mensal_rs,fonte_referencia,url_fonte,data_consulta,localidade,grau_confiabilidade,observacoes
+Responsavel Tecnico / Enfermeiro Chefe,Enfermagem,44,4750.00,3325.00,8075.00,Piso Nacional da Enfermagem / Coren AP,https://corenap.org.br,2026-07-28,Macapá / AP,Fonte Oficial,Exigência legal RDC 502/2021 Anvisa.
+Cuidador de Idosos (Escala 12x36),Assistencia,44,1820.00,1274.00,3094.00,Piso Regional / CASSAP,https://macapa.ap.gov.br,2026-07-28,Macapá / AP,Referência Pública,Cuidado continuado 24h (Necessidade de 10 cuidadores).
+Tecnico de Enfermagem,Enfermagem,44,3325.00,2327.50,5652.50,Piso Nacional da Enfermagem / Coren AP,https://corenap.org.br,2026-07-28,Macapá / AP,Fonte Oficial,Escala 24h (Necessidade de 4 técnicos).
+Nutricionista (RT Alimentacao),Saude,20,2400.00,1680.00,4080.00,CRN-7 (Conselho Regional de Nutrição),https://crn7.org.br,2026-07-28,Macapá / AP,Fonte Oficial,Supervisão de cardápios e dietas especiais.
+Fisioterapeuta,Saude,20,2600.00,1820.00,4420.00,Crefito-12 (Amapá / Pará),https://crefito12.org.br,2026-07-28,Macapá / AP,Fonte Oficial,Atendimento motor de reabilitação 3x por semana.
+Cozinheiro Industrial,Servicos,44,1950.00,1365.00,3315.00,Convenção Coletiva de Alimentação AP,https://macapa.ap.gov.br,2026-07-28,Macapá / AP,Referência Pública,Preparo das refeições diárias dos moradores.

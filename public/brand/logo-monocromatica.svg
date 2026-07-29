@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" width="600" height="140" fill="none">
+  <!-- Símbolo Monocromático -->
+  <g transform="translate(10, 10) scale(0.6)">
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#1B3B2B" stroke-width="4"/>
+    <path d="M50 120 C50 70, 150 70, 150 120" fill="none" stroke="#1B3B2B" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="100" cy="68" r="14" fill="#1B3B2B"/>
+    <path d="M45 110 L100 62 L155 110" fill="none" stroke="#1B3B2B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M100 78 C80 95, 80 125, 100 142 C120 125, 120 95, 100 78 Z" fill="#1B3B2B"/>
+    <path d="M100 88 V148" stroke="#FAF7F2" stroke-width="4" stroke-linecap="round"/>
+    <path d="M70 156 C85 142, 115 142, 130 156" fill="none" stroke="#1B3B2B" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Tipografia Monocromática -->
+  <text x="145" y="58" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#1B3B2B" letter-spacing="1">INSTITUTO</text>
+  <text x="145" y="94" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#1B3B2B" letter-spacing="2">VIDA PLENA</text>
+  <text x="146" y="118" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1B3B2B" letter-spacing="0.5">Viver com dignidade. Envelhecer com esperança.</text>
+</svg>

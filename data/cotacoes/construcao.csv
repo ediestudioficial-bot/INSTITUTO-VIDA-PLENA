@@ -1,0 +1,4 @@
+categoria,item,especificacao,unidade,valor_unitario_rs,fonte,url_fonte,data_consulta,localidade,grau_confiabilidade,observacoes
+Construcao,CUB Estadual AP R-8N,Custo Unitario Basico da Construcao Civil Amapá,m2,2450.00,Sinduscon AP / CBIC,https://cbic.org.br/cub/,2026-07-28,Macapá / AP,Estimativa Setorial,Referência oficial para padrão normal de construção residencial.
+Construcao,SINAPI AP Infraestrutura,Índice Nacional de Custos da Construção,m2,2180.00,Caixa Econômica Federal / IBGE,https://www.caixa.gov.br/poder-publico/infraestrutura/sinapi/,2026-07-28,Macapá / AP,Fonte Oficial,Tabela técnica de custos de insumos e mão de obra pública.
+Construcao,Terraplenagem e Nivelamento,Preparo de terreno plano permeável,m2,45.00,Referência Pública Setorial,https://macapa.ap.gov.br,2026-07-28,Macapá / AP,Estimativa Setorial,Serviço de limpeza e compactação de solo tropical.

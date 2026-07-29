@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: #2c332e;
+    background-color: #faf7f2;
+    font-size: 18px; /* Excelente legibilidade para pessoas mais velhas */
+  }
+
+  body {
+    font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif), Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 700;
+    color: #1b3b2b;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Foco Visível para Navegação Acessível */
+*:focus-visible {
+  outline: 3px solid #c59b27;
+  outline-offset: 3px;
+}
+
+/* Transição suave para preferências sem reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
