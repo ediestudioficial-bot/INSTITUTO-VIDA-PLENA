@@ -1,4 +1,4 @@
 categoria,item,especificacao,unidade,valor_unitario_rs,fornecedor_referencia,url_fonte,data_consulta,localidade,grau_confiabilidade,observacoes
-Energia_Agua,Gerador Diesel 100 kVA Silenciado,Grupo gerador com partida automática ATS trifásico,unidade,6800.00,Empresa de Geradores Regional AP,https://mercadolivre.com.br,2026-07-28,Macapá / AP,Referência Pública,Autonomia para iluminação, climatização e refrigeração.
-Energia_Agua,Reservatorio de Agua Potavel 15000L,Caixa d água em fibra de vidro reforçada com filtro,unidade,9800.00,Distribuidor de Hidráulica AP,https://macapa.ap.gov.br,2026-07-28,Macapá / AP,Fornecedor Identificado,Autonomia hidráulica mínima de 72 horas para a instituição.
-Energia_Agua,Sistema Solar Fotovoltaico 20kWp,Painéis solares e inversores para abatimento de energia,unidade,62000.00,Empresa de Energia Solar Amapá,https://macapa.ap.gov.br,2026-07-28,Macapá / AP,Estimativa Setorial,Redução continuada de custos operacionais de eletricidade.
+Energia_Agua,Gerador de emergencia,Potencia a dimensionar por projeto eletrico,unidade,,A pesquisar,,,Macapa / AP,Cotacao pendente,Nao adotar potencia ou preco antes do levantamento de cargas.
+Energia_Agua,Reserva de agua potavel,Volume a dimensionar por consumo e exigencias locais,unidade,,A pesquisar,,,Macapa / AP,Cotacao pendente,Validar autonomia qualidade da agua e estrutura de apoio.
+Energia_Agua,Sistema fotovoltaico,Potencia a dimensionar pelo historico ou simulacao de consumo,unidade,,A pesquisar,,,Macapa / AP,Cotacao pendente,Estudo depende do projeto eletrico e sombreamento.
