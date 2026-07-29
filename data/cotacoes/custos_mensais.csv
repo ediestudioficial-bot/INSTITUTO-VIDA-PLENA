@@ -1,6 +1,6 @@
 categoria,item,especificacao,unidade,valor_estimado_mensal_rs,fonte_referencia,url_fonte,data_consulta,localidade,grau_confiabilidade,observacoes
-Insumos,Alimentacao Coletiva (24 moradores + equipe),Insumos hortifruti carnes secos (6 refeicoes/dia),mes,14800.00,Pesquisa de Mercado Alimentar AP,https://macapa.ap.gov.br,2026-07-28,Macapá / AP,Estimativa Setorial,Calculado para 24 moradores + equipe de plantão.
-Insumos,Materiais de Higiene e Fraldas Geriatricas,Sabonetes fraldas luvas descartáveis saneantes,mes,4200.00,Distribuidora de Higiene AP,https://macapa.ap.gov.br,2026-07-28,Macapá / AP,Estimativa Setorial,Insumos diários de higiene e proteção sanitária.
-Servicos,Energia Eletrica (CEA Equatorial),Consumo estimado com climatização e gerador,mes,5500.00,Tarifa Comercial CEA Equatorial AP,https://equatorialenergia.com.br,2026-07-28,Macapá / AP,Fonte Oficial,Estimativa prévia antes da instalação solar.
-Servicos,Agua e Esgoto (CSA Amapá),Consumo estimado para lavanderia e cozinha,mes,1800.00,Tarifa Comercial CSA Amapá,https://csa-amapa.com.br,2026-07-28,Macapá / AP,Fonte Oficial,Fornecimento público de água e esgotamento.
-Servicos,Destinacao de Residuos de Saude (PGRSS),Coleta e destinação de resíduos infectantes por empresa credenciada,mes,1200.00,Empresa de Coleta Especializada AP,https://macapa.ap.gov.br,2026-07-28,Macapá / AP,Fornecedor Identificado,Exigência legal sanitária e ambiental.
+Insumos,Alimentacao,Numero de refeicoes dietas e equipe a dimensionar,mes,,A pesquisar,,,Macapa / AP,Estimativa pendente,Preencher apos cardapio tecnico e pesquisa regional documentada.
+Insumos,Higiene e descartaveis,Consumo por perfil de dependencia,mes,,A pesquisar,,,Macapa / AP,Estimativa pendente,Preencher apos protocolo assistencial e tres cotacoes.
+Servicos,Energia eletrica,Consumo conforme projeto e equipamentos,mes,,Concessionaria local,,,Macapa / AP,Simulacao pendente,Usar tarifa vigente e memoria de calculo.
+Servicos,Agua e esgoto,Consumo conforme ocupacao e processos,mes,,Concessionaria local,,,Macapa / AP,Simulacao pendente,Usar tarifa vigente e memoria de calculo.
+Servicos,Residuos de servicos de saude,Volume e classificacao conforme PGRSS,mes,,A pesquisar,,,Macapa / AP,Cotacao pendente,Confirmar enquadramento e prestadores licenciados.

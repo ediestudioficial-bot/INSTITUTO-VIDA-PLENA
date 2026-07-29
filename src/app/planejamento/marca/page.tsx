@@ -1,103 +1,56 @@
-import React from "react";
 import { Metadata } from "next";
+import { AlertTriangle, Search, ShieldCheck } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { StatusTag } from "@/components/StatusTag";
-import { ShieldCheck, Info, Search, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Painel de Pesquisa de Marca | Privado",
-  description: "Monitoramento público de anterioridade de marca no INPI.",
-  robots: {
-    index: false,
-    follow: false,
-  },
+  description: "Controle interno da validação do nome e da marca do Instituto Vida Plena.",
+  robots: { index: false, follow: false },
 };
 
-export default function MarcaPage() {
-  const marcas = [
-    {
-      expressao: "Instituto Vida Plena",
-      classe: "Classe 45 (Serviços Sociais / ILPI)",
-      resultado: "Registros em áreas de educação e saúde privada",
-      risco: "Risco Médio",
-      recomendacao: "Delimitação estrita de classe com especialista",
-    },
-    {
-      expressao: "Vida Plena",
-      classe: "Classe 45",
-      resultado: "Marcas ativas em suplementos e seguros",
-      risco: "Risco Elevado",
-      recomendacao: "Evitar uso isolado sem qualificação institucional",
-    },
-    {
-      expressao: "Instituto Cristão Vida Plena",
-      classe: "Classe 45",
-      resultado: "Nenhuma anterioridade exata identificada",
-      risco: "Risco Baixo",
-      recomendacao: "Alternativa forte de proteção",
-    },
-  ];
+const etapas = [
+  "Definir serviços e classes de Nice com especialista",
+  "Pesquisar expressão exata e sinais semelhantes no INPI",
+  "Analisar titulares, vigência e afinidade mercadológica",
+  "Verificar nome empresarial, domínios e uso institucional",
+  "Emitir parecer e registrar a decisão da governança",
+];
 
+export default function MarcaPage() {
   return (
     <div className="py-16 space-y-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Banner Principal */}
       <div className="bg-brand-deep text-brand-cream rounded-3xl p-8 md:p-12 space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-bold text-brand-gold uppercase bg-brand-cream/10 rounded-full border border-brand-gold/30">
-          <Search className="w-3.5 h-3.5 text-brand-gold" />
-          <span>Painel Interno de Pesquisa de Marca (Fase 8 — Privado)</span>
+          <Search className="w-3.5 h-3.5" />
+          <span>Painel interno — não indexado</span>
         </div>
-        <h1 className="text-3xl md:text-4xl font-serif font-bold text-brand-warmWhite">
-          Pesquisa Pública de Anterioridade no INPI
-        </h1>
-        <p className="text-sm md:text-base text-brand-cream/90 font-light max-w-3xl leading-relaxed">
-          Consulta prévia em bancos públicos de marcas para orientar o futuro depósito oficial.
-        </p>
+        <h1 className="text-3xl md:text-4xl font-serif font-bold text-brand-warmWhite">Validação do nome e da marca</h1>
+        <p className="text-brand-cream/90 max-w-3xl">“Instituto Vida Plena” permanece como nome de trabalho. A registrabilidade ainda não foi confirmada.</p>
       </div>
 
-      {/* Aviso Regulatório Importante */}
-      <div className="p-6 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 flex items-start gap-4">
-        <AlertTriangle className="w-6 h-6 text-amber-700 shrink-0 mt-0.5" />
-        <div className="space-y-1 text-sm leading-relaxed">
-          <h3 className="font-serif font-bold text-base text-amber-950">Aviso sobre a Marca:</h3>
-          <p>
-            <strong>Consulta pública preliminar. Nenhum depósito oficial ou protocolo pago foi realizado no INPI.</strong> A registrabilidade oficial dependerá de parecer de especialista em propriedade intelectual após a constituição do CNPJ.
-          </p>
-        </div>
+      <div className="p-6 rounded-2xl bg-amber-50 border border-amber-200 text-amber-950 flex items-start gap-4">
+        <AlertTriangle className="w-6 h-6 shrink-0 mt-0.5" />
+        <p className="text-sm leading-relaxed"><strong>Não há relatório exportado do INPI, protocolo ou parecer especializado anexado.</strong> Por isso, foram removidas classificações de risco e afirmações sobre marcas encontradas ou inexistentes.</p>
       </div>
 
-      {/* Tabela de Expressões Consultadas */}
-      <div className="space-y-4">
-        <SectionHeading
-          badge="Expressões Mapeadas"
-          title="Consultas Públicas de Marca"
-          description="Resultados da consulta nos bancos de dados públicos do INPI."
-        />
-
-        <div className="overflow-x-auto bg-brand-warmWhite rounded-2xl border border-brand-wood/15">
-          <table className="w-full text-left text-sm border-collapse">
-            <thead>
-              <tr className="border-b border-brand-wood/20 text-brand-deep font-serif font-bold bg-brand-cream/40">
-                <th className="py-3.5 px-4">Expressão Consultada</th>
-                <th className="py-3.5 px-4">Classe de Serviço</th>
-                <th className="py-3.5 px-4">Resultado Encontrado</th>
-                <th className="py-3.5 px-4">Avaliação Preliminar</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-brand-wood/10 text-brand-charcoal">
-              {marcas.map((item, idx) => (
-                <tr key={idx} className="hover:bg-brand-cream/20">
-                  <td className="py-3 px-4 font-bold text-brand-deep">{item.expressao}</td>
-                  <td className="py-3 px-4 font-mono text-xs">{item.classe}</td>
-                  <td className="py-3 px-4">{item.resultado}</td>
-                  <td className="py-3 px-4">
-                    <StatusTag status="estudo" label={item.risco} />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      <section className="space-y-6">
+        <SectionHeading badge="Nome provisório" title="Instituto Vida Plena" description="Uso permitido no planejamento, sem alegação de disponibilidade ou registro garantido." />
+        <div className="rounded-2xl border border-brand-wood/15 bg-brand-warmWhite p-6 flex items-center justify-between gap-4 flex-wrap">
+          <div className="flex items-center gap-3">
+            <ShieldCheck className="w-6 h-6 text-brand-sage" />
+            <div><p className="font-serif font-bold text-brand-deep">Situação jurídica da marca</p><p className="text-sm text-brand-charcoal/75">Busca formal e parecer ainda necessários.</p></div>
+          </div>
+          <StatusTag status="pendente" label="Não validada" />
         </div>
-      </div>
+      </section>
+
+      <section className="space-y-6">
+        <SectionHeading badge="Próximas ações" title="Roteiro de validação" description="A decisão final depende de análise profissional e registro documental." />
+        <ol className="grid md:grid-cols-2 gap-4">
+          {etapas.map((etapa, index) => <li key={etapa} className="p-5 rounded-2xl border border-brand-wood/15 bg-brand-cream/30 text-sm text-brand-charcoal"><strong className="text-brand-deep mr-2">{index + 1}.</strong>{etapa}</li>)}
+        </ol>
+      </section>
     </div>
   );
 }
